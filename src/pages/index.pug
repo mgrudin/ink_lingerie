@@ -4,5 +4,9 @@ block head
 	- var pageTitle = 'Ink Lingerie';
 
 block content
-	include /components/header/header
-	include /components/footer/footer
+	.page__header
+		include /components/header/header
+	.page__content
+		include /components/swiper/swiper
+	.page__footer
+		include /components/footer/footer

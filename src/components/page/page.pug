@@ -1,4 +1,6 @@
 mixin page()
 	body.page&attributes(attributes)
+		.page__bg_line
+			include /components/bg_line/bg_line
 		.page__container
 			block
