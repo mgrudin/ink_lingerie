@@ -1,0 +1,14 @@
+.footer {
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__line {
+    width: 56px;
+    height: 1px;
+    margin: 0 8px;
+    background-color: $line-color;
+    opacity: 0.24;
+  }
+}

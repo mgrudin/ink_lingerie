@@ -4,22 +4,10 @@
     padding: 0;
     list-style: none;
 
-    font-family: $text-font;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 11px;
-    line-height: 13px;
     text-align: right;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
   }
 
   &__item:not(:last-child) {
     margin-bottom: 10px;
-  }
-
-  &__link {
-    text-decoration: none;
-    color: $text-color;
   }
 }

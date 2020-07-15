@@ -1,12 +1,14 @@
+include /components/link/link
+
 .menu
   .menu__button
   nav
     ul.menu__list
       li.menu__item
-        a.menu__link(href="#") Commercial
+        +link("#", "Commercial")
       li.menu__item
-        a.menu__link(href="#") Editorial
+        +link("#", "Editorial")
       li.menu__item
-        a.menu__link(href="#") Reportage
+        +link("#", "Reportage")
       li.menu__item
-        a.menu__link(href="#") Meet me
+        +link("#", "Meet me")
