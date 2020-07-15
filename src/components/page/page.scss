@@ -1,6 +1,8 @@
 .page {
   height: 100vh;
-  background-color: #ffffff;
+  background-color: $bg-color;
+  font-family: $text-font;
+  color: $text-color;
 
   &__container {
     width: 100%;

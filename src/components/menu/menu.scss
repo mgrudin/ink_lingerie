@@ -4,7 +4,7 @@
     padding: 0;
     list-style: none;
 
-    font-family: TT Travels;
+    font-family: $text-font;
     font-style: normal;
     font-weight: 300;
     font-size: 11px;
@@ -20,6 +20,6 @@
 
   &__link {
     text-decoration: none;
-    color: #000000;
+    color: $text-color;
   }
 }
