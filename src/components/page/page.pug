@@ -1,6 +1,15 @@
 mixin page()
 	body.page&attributes(attributes)
-		.page__bg_line
+		.page__bg-line
 			include /components/bg_line/bg_line
+		.page__bg-photos
+			.page__scene
+				.page__scene-layer.page__scene-layer-1(data-depth=0.2)
+					img.page__photo.page__photo--prev
+				.page__scene-layer.page__scene-layer-2(data-depth=0.5)
+					img.page__photo.page__photo--active
+				.page__scene-layer.page__scene-layer-3(data-depth=0.8)
+					img.page__photo.page__photo--next
 		.page__container
 			block
+		.page__mouse-text drag me

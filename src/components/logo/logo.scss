@@ -1,0 +1,10 @@
+.logo {
+  opacity: 0;
+  animation: logo-start 1s ease 2.5s forwards;
+}
+
+@keyframes logo-start {
+  100% {
+    opacity: 1;
+  }
+}

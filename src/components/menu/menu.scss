@@ -1,4 +1,7 @@
 .menu {
+  opacity: 0;
+  animation: menu-start 1s ease 3s forwards;
+
   &__list {
     margin: 0;
     padding: 0;
@@ -9,5 +12,11 @@
 
   &__item:not(:last-child) {
     margin-bottom: 10px;
+  }
+}
+
+@keyframes menu-start {
+  to {
+    opacity: 1;
   }
 }

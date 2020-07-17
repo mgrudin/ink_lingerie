@@ -2,11 +2,13 @@
 @import 'helpers/normalize.scss';
 @import 'helpers/variables.scss';
 
+@import '../../node_modules/swiper/swiper.scss';
+
 @import '../components/page/page.scss';
 @import '../components/bg_line/bg_line.scss';
 @import '../components/header/header.scss';
 @import '../components/link/link.scss';
+@import '../components/logo/logo.scss';
 @import '../components/menu/menu.scss';
-@import '../../node_modules/swiper/swiper.scss';
-@import '../components/title/title.scss';
+@import '../components/swiper/swiper.scss';
 @import '../components/footer/footer.scss';
