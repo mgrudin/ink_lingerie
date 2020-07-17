@@ -13,7 +13,7 @@
     align-items: center;
 
     font-family: $title-font;
-    font-size: 125.581px;
+    font-size: 44px;
     line-height: 86%;
     color: rgba(0, 0, 0, 0);
     text-transform: uppercase;
@@ -39,6 +39,24 @@
   &-slide-next {
     justify-content: flex-start;
     transform: rotate(1.5deg);
+  }
+
+  @media screen and (min-width: 414px) {
+    &-slide {
+      font-size: 48px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &-slide {
+      font-size: 96px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    &-slide {
+      font-size: 125px;
+    }
   }
 }
 

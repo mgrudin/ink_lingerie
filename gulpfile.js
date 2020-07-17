@@ -19,6 +19,9 @@ const browserSync = require('browser-sync').create();
 const gulpIf = require('gulp-if');
 const del = require('del');
 const newer = require('gulp-newer');
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
 
 sass.compiler = require('node-sass');
 
@@ -91,6 +94,15 @@ function templates() {
     .pipe(gulp.dest('dist'));
 }
 
+function scripts(cb) {
+  gulp
+    .src('./src/scripts/app.js')
+    .pipe(webpackStream(webpackConfig), webpack)
+    .pipe(gulp.dest('./dist/scripts'));
+
+  cb();
+}
+
 function server(cb) {
   browserSync.init({
     files: ['dist/**/*'],
@@ -116,13 +128,17 @@ function watch() {
 
   gulp.watch('src/{styles,components}/**/*.scss', gulp.series(styles));
   gulp.watch('src/{pages,components}/**/*.pug', gulp.series(templates));
+  gulp.watch('src/scripts/**/*.js', gulp.series(scripts));
   gulp.watch('src/assets/**/*.*', gulp.series(copy));
 }
 
-exports.build = gulp.series(clean, gulp.parallel(copy, styles, templates));
+exports.build = gulp.series(
+  clean,
+  gulp.parallel(copy, styles, templates, scripts)
+);
 exports.default = gulp.series(
   clean,
-  gulp.parallel(copy, styles, templates),
+  gulp.parallel(copy, styles, templates, scripts),
   server,
   watch
 );

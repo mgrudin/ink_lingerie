@@ -1,8 +1,11 @@
 include /components/link/link
 
 .menu
-  .menu__button
-  nav
+  button.menu__button(type="button")
+    svg(width="20" height="9" viewBox="0 0 20 9" fill="none" xmlns="http://www.w3.org/2000/svg")
+      rect(width="20" height="1" fill="#282828" fill-opacity="0.57")
+      rect(y="8" width="20" height="1" fill="#282828" fill-opacity="0.57")
+  nav.menu__nav
     ul.menu__list
       li.menu__item
         +link("#", "Commercial")

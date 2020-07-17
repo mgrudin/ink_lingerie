@@ -1,0 +1,45 @@
+.bg-line {
+  &__svg {
+    display: none;
+
+    path {
+      stroke-dasharray: 1920;
+      stroke-dashoffset: 1920;
+      animation: dash 3s linear forwards;
+    }
+  }
+
+  &__svg--mobile {
+    display: none;
+  }
+
+  &__svg--mobile-sm {
+    display: block;
+  }
+
+  @media screen and (min-width: 414px) {
+    &__svg--mobile-sm {
+      display: none;
+    }
+
+    &__svg--mobile {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__svg--desk {
+      display: block;
+    }
+
+    &__svg--mobile {
+      display: none;
+    }
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

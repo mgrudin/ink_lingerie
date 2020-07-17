@@ -1,17 +1,38 @@
 .menu {
+  text-align: right;
   opacity: 0;
   animation: menu-start 1s ease 3s forwards;
+
+  &__button {
+    width: 20px;
+    height: 9px;
+    padding: 0;
+    background: none;
+    border: none;
+  }
+
+  &__nav {
+    display: none;
+  }
 
   &__list {
     margin: 0;
     padding: 0;
     list-style: none;
-
-    text-align: right;
   }
 
   &__item:not(:last-child) {
     margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__button {
+      display: none;
+    }
+
+    &__nav {
+      display: block;
+    }
   }
 }
 
